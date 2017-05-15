@@ -1,0 +1,4 @@
+classes:
+  - system.docker.swarm.manager
+  - cluster.scale-test.infra
+  - cluster.scale-test.cicd.control

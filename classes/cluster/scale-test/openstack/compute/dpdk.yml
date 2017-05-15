@@ -1,0 +1,3 @@
+classes:
+- cluster.scale-test.openstack.compute
+- system.neutron.compute.nfv.dpdk
