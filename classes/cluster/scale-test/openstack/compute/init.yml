@@ -4,7 +4,6 @@ classes:
 - system.linux.system.repo.mcp.extra
 - system.nova.compute.cluster
 - system.neutron.compute.cluster
-- system.ceilometer.agent.cluster
 - cluster.scale-test.infra
 parameters:
   _param:

@@ -12,7 +12,6 @@ classes:
 - system.salt.control.cluster.openstack_proxy_cluster
 - system.salt.control.cluster.openstack_database_cluster
 - system.salt.control.cluster.openstack_message_queue_cluster
-- system.salt.control.cluster.openstack_telemetry_cluster
 - system.salt.control.cluster.cicd_control_cluster
 - cluster.scale-test.cicd.gluster
 - cluster.scale-test.infra
@@ -48,11 +47,6 @@ parameters:
           ram: 32768
           disk_profile: small
           net_profile: default
-        openstack.telemetry:
-          cpu: 8
-          ram: 32768
-          disk_profile: xxlarge
-          net_profile: default
         openstack.proxy:
           cpu: 4
           ram: 8192
@@ -77,11 +71,6 @@ parameters:
           cpu: 4
           ram: 8192
           disk_profile: small
-          net_profile: default
-        stacklight.telemetry:
-          cpu: 4
-          ram: 8192
-          disk_profile: xxlarge
           net_profile: default
       cluster:
         internal:
