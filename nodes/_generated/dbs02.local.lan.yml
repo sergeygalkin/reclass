@@ -1,0 +1,16 @@
+classes:
+- service.galera.slave.cluster
+- cluster.scale-test.openstack.database
+parameters:
+  _param:
+    keepalived_vip_priority: 102
+    linux_system_codename: trusty
+    mysql_cluster_role: slave
+    salt_master_host: 10.10.100.1
+    single_address: 10.3.63.240
+  linux:
+    system:
+      name: dbs02
+      domain: local.lan
+      cluster: default
+      environment: prd

@@ -1,0 +1,14 @@
+classes:
+- cluster.scale-test.openstack.compute
+parameters:
+  _param:
+    linux_system_codename: xenial
+    salt_master_host: 10.10.100.1
+    single_address: '10.3.0.56.103'
+    tenant_address: '10.0.2.103'
+  linux:
+    system:
+      name: cmp003
+      domain: local.lan
+      cluster: default
+      environment: prd

@@ -20,11 +20,11 @@ parameters:
 
     cluster_domain: local.lan
     cluster_name: scale-test
-    cluster_public_host: 10.3.56.47
+    cluster_public_host: 10.3.56.200
     infra_kvm_address: 10.3.63.245
-    infra_kvm_node01_address: 10.3.56.47
+    infra_kvm_node01_address: 10.3.56.200
     infra_kvm_node02_address: 10.3.56.48
-    infra_kvm_node03_address: 10.3.57.141
+    infra_kvm_node03_address: 10.3.59.48
     infra_kvm_node01_deploy_address: 10.10.0.241
     infra_kvm_node02_deploy_address: 10.10.0.242
     infra_kvm_node03_deploy_address: 10.10.0.243
@@ -44,7 +44,7 @@ parameters:
     dns_server01: 8.8.8.8
     dns_server02: 8.8.4.4
     deploy_network_netmask: 255.255.0.0
-    deploy_network_gateway: 10.10.0.1
+    deploy_network_gateway: 10.10.0.52
 
     linux_dhcp_interface:
       enabled: true

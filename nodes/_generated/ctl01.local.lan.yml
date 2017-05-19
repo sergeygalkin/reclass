@@ -1,0 +1,17 @@
+classes:
+- cluster.scale-test.openstack.control
+- cluster.scale-test.openstack.control_init
+parameters:
+  _param:
+    keepalived_vip_priority: 103
+    linux_system_codename: trusty
+    opencontrail_database_id: 1
+    rabbitmq_cluster_role: master
+    salt_master_host: 10.10.100.1
+    single_address: 10.3.63.235
+  linux:
+    system:
+      name: ctl01
+      domain: local.lan
+      cluster: default
+      environment: prd

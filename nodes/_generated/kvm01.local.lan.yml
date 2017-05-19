@@ -1,0 +1,17 @@
+classes:
+- cluster.scale-test.infra.kvm
+parameters:
+  _param:
+    deploy_address: 10.10.0.241
+    keepalived_vip_priority: 100
+    linux_system_codename: xenial
+    public_address: 10.3.56.200
+    salt_master_host: 10.10.100.1
+    single_address: 10.3.56.200
+    storage_address: 10.3.56.200
+  linux:
+    system:
+      name: kvm01
+      domain: local.lan
+      cluster: default
+      environment: prd

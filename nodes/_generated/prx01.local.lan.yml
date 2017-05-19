@@ -1,0 +1,14 @@
+classes:
+- cluster.scale-test.openstack.proxy
+parameters:
+  _param:
+    keepalived_vip_priority: 102
+    linux_system_codename: trusty
+    salt_master_host: 10.10.100.1
+    single_address: 10.3.63.250
+  linux:
+    system:
+      name: prx01
+      domain: local.lan
+      cluster: default
+      environment: prd

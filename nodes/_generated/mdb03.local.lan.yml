@@ -1,0 +1,14 @@
+classes:
+- cluster.scale-test.openstack.telemetry
+parameters:
+  _param:
+    keepalived_vip_priority: 102
+    linux_system_codename: xenial
+    salt_master_host: 10.10.100.1
+    single_address: 10.3.63.229
+  linux:
+    system:
+      name: mdb03
+      domain: local.lan
+      cluster: default
+      environment: prd

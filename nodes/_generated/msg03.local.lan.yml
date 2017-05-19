@@ -1,0 +1,15 @@
+classes:
+- cluster.scale-test.openstack.message_queue
+parameters:
+  _param:
+    keepalived_vip_priority: 101
+    linux_system_codename: trusty
+    rabbitmq_cluster_role: slave
+    salt_master_host: 10.10.100.1
+    single_address: 10.3.63.248
+  linux:
+    system:
+      name: msg03
+      domain: local.lan
+      cluster: default
+      environment: prd
