@@ -72,15 +72,6 @@ parameters:
           ram: 8192
           disk_profile: small
           net_profile: default
-      cluster:
-        internal:
-          node:
-            mdb01:
-              image: ${_param:salt_control_xenial_image}
-            mdb02:
-              image: ${_param:salt_control_xenial_image}
-            mdb03:
-              image: ${_param:salt_control_xenial_image}
   virt:
     nic:
       default:

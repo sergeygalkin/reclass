@@ -6,7 +6,7 @@ parameters:
     keepalived_vip_priority: 100
     linux_system_codename: xenial
     public_address: 10.3.56.200
-    salt_master_host: 10.10.100.1
+    salt_master_host: 10.3.63.238
     single_address: 10.3.56.200
     storage_address: 10.3.56.200
   linux:

@@ -7,7 +7,7 @@ parameters:
     linux_system_codename: trusty
     opencontrail_database_id: 1
     rabbitmq_cluster_role: master
-    salt_master_host: 10.10.100.1
+    salt_master_host: 10.3.63.238
     single_address: 10.3.63.235
   linux:
     system:

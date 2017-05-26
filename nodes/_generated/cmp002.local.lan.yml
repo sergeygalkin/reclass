@@ -3,8 +3,8 @@ classes:
 parameters:
   _param:
     linux_system_codename: xenial
-    salt_master_host: 10.10.100.1
-    single_address: '10.3.0.56.102'
+    salt_master_host: 10.3.63.238
+    single_address: '10.3.62.102'
     tenant_address: '10.0.2.102'
   linux:
     system:

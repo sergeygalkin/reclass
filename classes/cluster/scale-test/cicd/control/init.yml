@@ -45,7 +45,8 @@ parameters:
     cluster_vip_address: ${_param:control_vip_address}
     control_vip_address: ${_param:cicd_control_address}
     cluster_public_host: ${_param:control_vip_address}
-    salt_api_password: PxkQEvVJFcqvPRBJqjrm6UG4d55BvnYP
+   # salt_api_password: PxkQEvVJFcqvPRBJqjrm6UG4d55BvnYP
+    salt_api_password: hovno12345!
     # Docker images and versions
     docker_registry_http_secret: 807iFuYBPmzLH13L
     # CI/CD service databases

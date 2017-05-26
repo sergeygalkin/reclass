@@ -15,21 +15,35 @@ parameters:
     keepalived_vip_virtual_router_id: 69
     primary_first_nic: eth0
     primary_second_nic: eth1
+    primary_third_nic: eth2
+    primary_fourth_nic: eth3
   linux:
     network:
       bridge: openvswitch
       interface:
-        eth1:
+        eth0:
           enabled: true
           type: slave
           proto: manual
           name: ${_param:primary_first_nic}
           master: bond0
-        eth2:
+        eth1:
           enabled: true
           type: slave
           proto: manual
           name: ${_param:primary_second_nic}
+          master: bond0
+        eth2:
+          enabled: true
+          type: slave
+          proto: manual
+          name: ${_param:primary_third_nic}
+          master: bond0
+        eth3:
+          enabled: true
+          type: slave
+          proto: manual
+          name: ${_param:primary_fourth_nic}
           master: bond0
         bond0:
           enabled: true
@@ -40,7 +54,9 @@ parameters:
           use_interfaces:
           - ${_param:primary_first_nic}
           - ${_param:primary_second_nic}
-          slaves: ${_param:primary_first_nic} ${_param:primary_second_nic}
+          - ${_param:primary_third_nic}
+          - ${_param:primary_fourth_nic}
+          slaves: ${_param:primary_first_nic} ${_param:primary_second_nic} ${_param:primary_third_nic} ${_param:primary_fourth_nic}
           mode: active-backup
         br-floating:
           enabled: true

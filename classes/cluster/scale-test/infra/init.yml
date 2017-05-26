@@ -16,7 +16,7 @@ parameters:
     # infra service addresses
     infra_config_hostname: cfg01
     infra_config_address: 10.3.63.238
-    infra_config_deploy_address: 10.10.100.1
+    infra_config_deploy_address: 10.3.63.238
 
     cluster_domain: local.lan
     cluster_name: scale-test

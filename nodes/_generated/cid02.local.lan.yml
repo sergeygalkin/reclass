@@ -5,7 +5,7 @@ parameters:
     cicd_database_id: 2
     keepalived_vip_priority: 102
     linux_system_codename: xenial
-    salt_master_host: 10.10.100.1
+    salt_master_host: 10.3.63.238
     single_address: 10.3.63.232
   linux:
     system:

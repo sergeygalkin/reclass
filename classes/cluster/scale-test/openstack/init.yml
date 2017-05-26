@@ -74,7 +74,7 @@ parameters:
     openstack_control_node01_address: 10.3.63.235
     openstack_control_node02_address: 10.3.63.236
     openstack_control_node03_address: 10.3.63.237
-    openstack_database_address: 10.3.63.238
+    openstack_database_address: 10.3.63.138
     openstack_database_node01_address: 10.3.63.239
     openstack_database_node02_address: 10.3.63.240
     openstack_database_node03_address: 10.3.63.241
@@ -83,15 +83,11 @@ parameters:
     openstack_message_queue_node02_address: 10.3.63.247
     openstack_message_queue_node03_address: 10.3.63.248
 
-    openstack_gateway_node01_address: 10.3.63.242
-    openstack_gateway_node02_address: 10.3.56.243
-    openstack_gateway_node03_address: 10.3.63.244
+    openstack_gateway_node01_address: 10.3.56.147
     openstack_gateway_node01_tenant_address: 10.0.2.6
-    openstack_gateway_node02_tenant_address: 10.0.2.7
-    openstack_gateway_node03_tenant_address: 10.0.2.8
 
     # OpenStack Compute
-    openstack_compute_rack01_single_subnet: 10.3.0.56
+    openstack_compute_rack01_single_subnet: 10.3.62
     openstack_compute_rack01_tenant_subnet: 10.0.2
     openstack_compute_rack01_hostname: cmp
 
@@ -207,13 +203,3 @@ parameters:
           names:
           - ${_param:openstack_gateway_node01_hostname}
           - ${_param:openstack_gateway_node01_hostname}.${_param:cluster_domain}
-        gtw02:
-          address: ${_param:openstack_gateway_node02_address}
-          names:
-          - ${_param:openstack_gateway_node02_hostname}
-          - ${_param:openstack_gateway_node02_hostname}.${_param:cluster_domain}
-        gtw03:
-          address: ${_param:openstack_gateway_node03_address}
-          names:
-          - ${_param:openstack_gateway_node03_hostname}
-          - ${_param:openstack_gateway_node03_hostname}.${_param:cluster_domain}

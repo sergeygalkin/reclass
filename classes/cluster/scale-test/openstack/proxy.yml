@@ -9,6 +9,7 @@ classes:
 - system.nginx.server.proxy.openstack_api
 - system.nginx.server.proxy.openstack_vnc
 - system.nginx.server.proxy.openstack_web
+- system.nginx.server.proxy.openstack.horizon
 - system.horizon.server.single
 - system.salt.minion.cert.proxy.openstack
 - system.salt.minion.cert.proxy.pki
