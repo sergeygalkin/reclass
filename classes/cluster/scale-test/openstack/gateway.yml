@@ -57,7 +57,7 @@ parameters:
           - ${_param:primary_third_nic}
           - ${_param:primary_fourth_nic}
           slaves: ${_param:primary_first_nic} ${_param:primary_second_nic} ${_param:primary_third_nic} ${_param:primary_fourth_nic}
-          mode: active-backup
+          mode: 802.3ad
         br-floating:
           enabled: true
           type: ovs_bridge

@@ -20,7 +20,7 @@ parameters:
 
     cluster_domain: local.lan
     cluster_name: scale-test
-    cluster_public_host: 10.3.56.200
+    cluster_public_host: ${_param:openstack_proxy_address}
     infra_kvm_address: 10.3.63.245
     infra_kvm_node01_address: 10.3.56.200
     infra_kvm_node02_address: 10.3.56.48
