@@ -8,6 +8,7 @@ classes:
 - system.salt.control.virt
 - system.glusterfs.server.volume.glance
 - system.glusterfs.server.volume.keystone
+- system.glusterfs.server.volume.salt_pki
 - system.salt.control.cluster.openstack_control_cluster
 - system.salt.control.cluster.openstack_proxy_cluster
 - system.salt.control.cluster.openstack_database_cluster
