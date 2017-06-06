@@ -42,6 +42,7 @@ parameters:
 
     mysql_admin_user: root
     mysql_admin_password: ${_param:galera_server_admin_password}
+    mysql_aodh_password: ebah5SooZun9AeraiF6jei1u
     mysql_cinder_password: yHjU4YqwHUBFctwH
     mysql_glance_password: c0krENYaB0v6eHnI
     mysql_heat_password: HTJFuJ4SRvZoaIJY
@@ -65,7 +66,7 @@ parameters:
     mongodb_shared_key: Nwc0GYUihHY9LfeRA4zp9VD3H0w0bdQLwDLU6BpFDcOWUK2GmYUpSZ5vQx8gKKw8
     metadata_password: Faici8qnWL1tiPU2
     salt_pki_proxy_alt_names: IP:${_param:cluster_public_host},DNS:${_param:cluster_public_host},IP:${_param:openstack_proxy_address},DNS:horizon.${_param:cluster_domain}
-    
+
     # openstack service addresses
     openstack_proxy_address: 10.3.63.249
     openstack_proxy_node01_address: 10.3.63.250
@@ -113,7 +114,7 @@ parameters:
     openstack_gateway_node01_hostname: gtw01
     openstack_gateway_node02_hostname: gtw02
     openstack_gateway_node03_hostname: gtw03
-    
+
     # Billing
     #keystone_billometer_password: LHnJ2tKlptpexMc1
     #keystone_billometer_address: ${_param:billometer_service_host}
