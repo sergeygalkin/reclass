@@ -88,6 +88,7 @@ parameters:
     openstack_gateway_address: 10.3.56.147
     openstack_gateway_node01_address: 10.3.56.147
     openstack_gateway_tenant_address: 10.0.2.6
+    tenant_address: 10.0.2.6
     openstack_gateway_node01_tenant_address: 10.0.2.6
 
 
