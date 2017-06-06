@@ -42,7 +42,8 @@ parameters:
 
     mysql_admin_user: root
     mysql_admin_password: ${_param:galera_server_admin_password}
-    mysql_aodh_password: ebah5SooZun9AeraiF6jei1u
+    mysql_aodh_password: ebah5SooZun9AeraiF6je
+    mysql_ceilometer_password: ebah5SooZun9AeraiF6je
     mysql_cinder_password: yHjU4YqwHUBFctwH
     mysql_glance_password: c0krENYaB0v6eHnI
     mysql_heat_password: HTJFuJ4SRvZoaIJY
