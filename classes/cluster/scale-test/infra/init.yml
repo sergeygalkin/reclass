@@ -23,13 +23,22 @@ parameters:
     cluster_domain: local.lan
     cluster_name: scale-test
     cluster_public_host: ${_param:openstack_proxy_address}
-    infra_kvm_address: 10.3.63.245
-    infra_kvm_node01_address: 10.3.56.200
-    infra_kvm_node02_address: 10.3.56.48
-    infra_kvm_node03_address: 10.3.59.48
-    infra_kvm_node01_deploy_address: 10.10.0.241
-    infra_kvm_node02_deploy_address: 10.10.0.242
-    infra_kvm_node03_deploy_address: 10.10.0.243
+    ## Intel
+    # infra_kvm_address: 10.3.63.245
+    # infra_kvm_node01_address: 10.3.56.200
+    # infra_kvm_node02_address: 10.3.56.48
+    # infra_kvm_node03_address: 10.3.59.48
+    # infra_kvm_node01_deploy_address: 10.10.0.241
+    # infra_kvm_node02_deploy_address: 10.10.0.242
+    # infra_kvm_node03_deploy_address: 10.10.0.243
+    ## Czech
+    infra_kvm_address: 172.16.44.160
+    infra_kvm_node01_address: 172.16.44.161
+    infra_kvm_node02_address: 172.16.44.162
+    infra_kvm_node03_address: 172.16.44.163
+    infra_kvm_node01_deploy_address: 10.11.0.101
+    infra_kvm_node02_deploy_address: 10.11.0.102
+    infra_kvm_node03_deploy_address: 10.11.0.103
     infra_kvm_node01_hostname: kvm01
     infra_kvm_node02_hostname: kvm02
     infra_kvm_node03_hostname: kvm03
@@ -38,15 +47,15 @@ parameters:
     glusterfs_node02_address: ${_param:infra_kvm_node02_address}
     glusterfs_node03_address: ${_param:infra_kvm_node03_address}
 
-    control_network_netmask: 255.255.248.0
+    control_network_netmask: 255.255.252.0
     tenant_network_netmask: 255.255.255.0
-    control_vlan: 130
-    tenant_vlan: 159
+    control_vlan: 2
+    tenant_vlan: 1101
 
     dns_server01: 8.8.8.8
     dns_server02: 8.8.4.4
-    deploy_network_netmask: 255.255.0.0
-    deploy_network_gateway: 10.10.0.52
+    deploy_network_netmask: 255.255.255.0
+    deploy_network_gateway: 10.11.0.254
 
     linux_dhcp_interface:
       enabled: true

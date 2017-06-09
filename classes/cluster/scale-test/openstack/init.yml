@@ -68,25 +68,48 @@ parameters:
     metadata_password: Faici8qnWL1tiPU2
     salt_pki_proxy_alt_names: IP:${_param:cluster_public_host},DNS:${_param:cluster_public_host},IP:${_param:openstack_proxy_address},DNS:horizon.${_param:cluster_domain}
 
-    # openstack service addresses
-    openstack_proxy_address: 10.3.63.249
-    openstack_proxy_node01_address: 10.3.63.250
-    openstack_proxy_node02_address: 10.3.63.251
-    openstack_control_address: 10.3.63.234
-    openstack_control_node01_address: 10.3.63.235
-    openstack_control_node02_address: 10.3.63.236
-    openstack_control_node03_address: 10.3.63.237
-    openstack_database_address: 10.3.63.138
-    openstack_database_node01_address: 10.3.63.239
-    openstack_database_node02_address: 10.3.63.240
-    openstack_database_node03_address: 10.3.63.241
-    openstack_message_queue_address: 10.3.63.245
-    openstack_message_queue_node01_address: 10.3.63.246
-    openstack_message_queue_node02_address: 10.3.63.247
-    openstack_message_queue_node03_address: 10.3.63.248
+    # openstack service addresses Intel
+    # openstack_proxy_address: 10.3.63.249
+    # openstack_proxy_node01_address: 10.3.63.250
+    # openstack_proxy_node02_address: 10.3.63.251
+    # openstack_control_address: 10.3.63.234
+    # openstack_control_node01_address: 10.3.63.235
+    # openstack_control_node02_address: 10.3.63.236
+    # openstack_control_node03_address: 10.3.63.237
+    # openstack_database_address: 10.3.63.138
+    # openstack_database_node01_address: 10.3.63.239
+    # openstack_database_node02_address: 10.3.63.240
+    # openstack_database_node03_address: 10.3.63.241
+    # openstack_message_queue_address: 10.3.63.245
+    # openstack_message_queue_node01_address: 10.3.63.246
+    # openstack_message_queue_node02_address: 10.3.63.247
+    # openstack_message_queue_node03_address: 10.3.63.248
+    #
+    # openstack_gateway_address: 10.3.56.147
+    # openstack_gateway_node01_address: 10.3.56.147
+    # openstack_gateway_tenant_address: 10.0.2.6
+    # tenant_address: 10.0.2.6
+    # openstack_gateway_node01_tenant_address: 10.0.2.6
 
-    openstack_gateway_address: 10.3.56.147
-    openstack_gateway_node01_address: 10.3.56.147
+    # openstack service addresses Czech
+    openstack_proxy_address: 172.16.44.164
+    openstack_proxy_node01_address: 172.16.44.165
+    openstack_proxy_node02_address: 172.16.44.166
+    openstack_control_address: 172.16.44.167
+    openstack_control_node01_address: 172.16.44.168
+    openstack_control_node02_address: 172.16.44.169
+    openstack_control_node03_address: 172.16.44.170
+    openstack_database_address: 172.16.44.171
+    openstack_database_node01_address: 172.16.44.172
+    openstack_database_node02_address: 172.16.44.173
+    openstack_database_node03_address: 172.16.44.174
+    openstack_message_queue_address: 172.16.44.175
+    openstack_message_queue_node01_address: 172.16.44.176
+    openstack_message_queue_node02_address: 172.16.44.177
+    openstack_message_queue_node03_address: 172.16.44.178
+
+    openstack_gateway_address: 172.16.44.179
+    openstack_gateway_node01_address: 172.16.44.180
     openstack_gateway_tenant_address: 10.0.2.6
     tenant_address: 10.0.2.6
     openstack_gateway_node01_tenant_address: 10.0.2.6

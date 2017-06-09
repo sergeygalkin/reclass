@@ -14,7 +14,7 @@ classes:
 - system.reclass.storage.system.openstack_gateway_single
 - system.reclass.storage.system.openstack_proxy_cluster
 - system.reclass.storage.system.openstack_database_cluster
-- system.reclass.storage.system.openstack_gateway_single
+# - system.reclass.storage.system.openstack_gateway_single
 - system.reclass.storage.system.openstack_message_queue_cluster
 - system.reclass.storage.system.cicd_control_cluster
 - cluster.scale-test.infra
