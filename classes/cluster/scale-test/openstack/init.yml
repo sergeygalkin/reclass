@@ -86,10 +86,14 @@ parameters:
     openstack_message_queue_node03_address: 10.3.63.248
 
     openstack_gateway_address: 10.3.56.147
-    openstack_gateway_node01_address: 10.3.56.147
+    openstack_gateway_node01_address: 10.3.56.189
+    openstack_gateway_node02_address: 10.3.56.179
+    openstack_gateway_node03_address: 10.3.56.177
     openstack_gateway_tenant_address: 10.0.2.6
     tenant_address: 10.0.2.6
-    openstack_gateway_node01_tenant_address: 10.0.2.6
+    openstack_gateway_node01_tenant_address: 10.0.2.7
+    openstack_gateway_node01_tenant_address: 10.0.2.8
+    openstack_gateway_node01_tenant_address: 10.0.2.9
 
 
     # OpenStack Compute
