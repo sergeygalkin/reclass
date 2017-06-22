@@ -12,6 +12,7 @@ parameters:
     neutron_control_dvr: False
     neutron_gateway_dvr: False
     neutron_compute_dvr: False
+    neutron_enable_qos: False
 
     neutron_gateway_agent_mode: legacy
     neutron_compute_agent_mode: legacy
