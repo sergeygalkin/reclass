@@ -2,7 +2,6 @@ classes:
   # Services
   - system.docker.client
   - system.aptly.server.docker
-  - system.aptly.client.publisher
   # Jenkins
   - system.jenkins.master.config
   - system.jenkins.client
@@ -15,7 +14,14 @@ classes:
   - system.jenkins.client.job.deploy.update.package
   - system.jenkins.client.job.deploy.update.config
   # Security
-  - system.jenkins.client.user.admin
+  - system.jenkins.client.security.ldap
+  - system.jenkins.client.security.matrix
+  # Slaves
+  - system.jenkins.client.node
+  # OpenLDAP
+  - system.openldap.client
+  - system.openldap.client.people.admin
+
 
   # Gerrit
   - system.gerrit.client
