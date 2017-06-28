@@ -1,6 +1,7 @@
 
 classes:
   - system.linux.system.haveged
+  - system.aptly.client.publisher
   - system.glusterfs.client.cluster
   - system.glusterfs.client.volume.aptly
   - system.glusterfs.client.volume.gerrit
