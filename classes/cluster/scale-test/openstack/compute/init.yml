@@ -74,6 +74,17 @@ parameters:
           proto: manual
           use_interfaces:
           - bond0
+        br-deploy:
+          enabled: true
+          type: bridge
+          address: ${_param:deploy_address}
+          netmask: 255.255.0.0
+          gateway: 10.10.0.52
+          name_servers:
+            - 8.8.8.8
+            - 8.8.4.4
+          use_interfaces:
+          - bond0
         br-mesh:
           enabled: true
           type: bridge
