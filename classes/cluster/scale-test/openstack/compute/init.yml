@@ -23,6 +23,17 @@ parameters:
   linux:
     network:
       interface:
+       eth5:
+          enabled: true
+          name: eth5
+          type: eth
+          address: ${_param:deploy_address}
+          netmask: 255.255.255.0
+          gateway: 10.10.0.52
+          name_servers:
+          - 8.8.8.8
+          - 8.8.4.4
+          mtu: 1500
         eth0:
           enabled: true
           type: slave
