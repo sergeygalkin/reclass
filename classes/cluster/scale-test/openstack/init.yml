@@ -100,6 +100,7 @@ parameters:
     # OpenStack Compute
     openstack_compute_rack01_single_subnet: 10.3.62
     openstack_compute_rack01_tenant_subnet: 10.0.2
+    openstack_compute_rack01_deploy_subnet: 10.10
     openstack_compute_rack01_hostname: cmp
 
     # openstack service hostnames
