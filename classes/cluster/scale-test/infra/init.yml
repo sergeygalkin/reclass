@@ -15,27 +15,16 @@ parameters:
 
     # infra service addresses
     infra_config_hostname: cfg01
-    # infra_config_address: 10.3.63.228
-    # infra_config_deploy_address: 10.3.63.228
     infra_config_address: 172.16.44.155
     infra_config_deploy_address: 172.16.44.155
 
     cluster_domain: local.lan
     cluster_name: scale-test
     cluster_public_host: ${_param:openstack_proxy_address}
-    ## Intel
-    # infra_kvm_address: 10.3.63.245
-    # infra_kvm_node01_address: 10.3.56.200
-    # infra_kvm_node02_address: 10.3.56.48
-    # infra_kvm_node03_address: 10.3.59.48
-    # infra_kvm_node01_deploy_address: 10.10.0.241
-    # infra_kvm_node02_deploy_address: 10.10.0.242
-    # infra_kvm_node03_deploy_address: 10.10.0.243
-    ## Czech
     infra_kvm_address: 172.16.44.160
-    infra_kvm_node01_address: 172.16.44.161
-    infra_kvm_node02_address: 172.16.44.162
-    infra_kvm_node03_address: 172.16.44.163
+    infra_kvm_node01_address: 172.16.44.146
+    infra_kvm_node02_address: 172.16.44.147
+    infra_kvm_node03_address: 172.16.44.148
     infra_kvm_node01_deploy_address: 10.11.0.101
     infra_kvm_node02_deploy_address: 10.11.0.102
     infra_kvm_node03_deploy_address: 10.11.0.103

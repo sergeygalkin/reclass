@@ -24,9 +24,8 @@ parameters:
     cluster_node03_address: ${_param:infra_kvm_node03_address}
     keepalived_vip_interface: br_ctl
     keepalived_vip_virtual_router_id: 69
-    deploy_nic: bond0
-    primary_third_nic: eth2
-    primary_fourth_nic: eth3
+    deploy_nic: eth0 
+    primary_third_nic: eth1
   salt:
     control:
       size: #RAM 4096,8192,16384,32768,65536
@@ -81,30 +80,6 @@ parameters:
   linux:
     network:
       interface:
-        eth0:
-          enabled: true
-          type: slave
-          proto: manual
-          name: ${_param:primary_first_nic}
-          master: bond0
-        eth1:
-          enabled: true
-          type: slave
-          proto: manual
-          name: ${_param:primary_second_nic}
-          master: bond0
-        eth2:
-          enabled: true
-          type: slave
-          proto: manual
-          name: ${_param:primary_third_nic}
-          master: bond0
-        eth3:
-          enabled: true
-          type: slave
-          proto: manual
-          name: ${_param:primary_fourth_nic}
-          master: bond0
         br_mgm:
           enabled: true
           proto: static
@@ -117,24 +92,16 @@ parameters:
           - ${_param:dns_server02}
           use_interfaces:
           - ${_param:deploy_nic}
-        bond0:
+        eth1:
           enabled: true
           proto: manual
-          type: bond
-          use_interfaces:
-          - ${_param:primary_first_nic}
-          - ${_param:primary_second_nic}
-          - ${_param:primary_third_nic}
-          - ${_param:primary_fourth_nic}
-          slaves: ${_param:primary_first_nic} ${_param:primary_second_nic} ${_param:primary_third_nic} ${_param:primary_fourth_nic}
-          mode: 802.3ad
-        bond0.1:
-          name: bond0.${_param:control_vlan}
+        eth1.2:
+          name: eth1.${_param:control_vlan}
           enabled: true
           proto: manual
           type: vlan
           use_interfaces:
-          - bond0
+          - eth1
         br_ctl:
           enabled: true
           type: bridge
@@ -142,7 +109,7 @@ parameters:
           address: ${_param:single_address}
           netmask: ${_param:control_network_netmask}
           use_interfaces:
-          - bond0.${_param:control_vlan}
+          - eth1.${_param:control_vlan}
   #   system:
   #     package:
   #       linux-image-4.8.0-39-generic:
