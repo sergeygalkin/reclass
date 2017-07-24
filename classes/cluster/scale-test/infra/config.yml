@@ -69,9 +69,12 @@ parameters:
             params:
               single_address:
                 value: ${_param:openstack_compute_rack01_single_subnet}.<<count>>
-                start: 149 
+                start: 149
               tenant_address:
                 value: ${_param:openstack_compute_rack01_tenant_subnet}.<<count>>
+                start: 149
+              deploy_address:
+                value: ${_param:openstack_compute_rack01_deploy_subnet}.<<count>>
                 start: 149
           params:
             salt_master_host: ${_param:reclass_config_master}
