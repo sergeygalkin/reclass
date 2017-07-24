@@ -84,13 +84,13 @@ parameters:
           enabled: true
           type: slave
           proto: manual
-          name: ${_param:primary_third_nic}
+          name: ${_param:primary_first_nic}
           master: bond0
         eth3:
           enabled: true
           type: slave
           proto: manual
-          name: ${_param:primary_fourth_nic}
+          name: ${_param:primary_second_nic}
           master: bond0
         br_mgm:
           enabled: true

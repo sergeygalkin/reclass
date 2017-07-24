@@ -16,28 +16,64 @@ parameters:
     cluster_node03_hostname: ${_param:openstack_control_node03_hostname}
     cluster_node03_address: ${_param:openstack_control_node03_address}
     nova_vncproxy_url: https://${_param:cluster_public_host}:6080
+    primary_first_nic: eth2
+    primary_second_nic: eth3
   linux:
     network:
       interface:
-        eth1.1:
-          name: eth1.${_param:control_vlan}
+        eth2:
+          enabled: true
+          type: slave
+          proto: manual
+          name: ${_param:primary_first_nic}
+          master: bond0
+        eth3:
+          enabled: true
+          type: slave
+          proto: manual
+          name: ${_param:primary_second_nic}
+          master: bond0
+        bond0:
+          enabled: true
+          proto: manual
+          type: bond
+          use_interfaces:
+          - ${_param:primary_second_nic}
+          - ${_param:primary_first_nic}
+          slaves: ${_param:primary_first_nic} ${_param:primary_second_nic}
+          mode: 802.3ad
+        bond0.1:
+          name: bond0.${_param:control_vlan}
           enabled: true
           type: vlan
           proto: static
           address: ${_param:single_address}
           netmask: ${_param:control_network_netmask}
           use_interfaces:
-          - 
-        eth1.2:
-          name: eth1.${_param:tenant_vlan}
+          - bond0
+        bond0.2:
+          name: bond0.${_param:tenant_vlan}
           enabled: true
           type: vlan
           proto: manual
+          use_interfaces:
+          - bond0
+        br-deploy:
+          enabled: true
+          type: bridge
+          address: ${_param:deploy_address}
+          netmask: 255.255.0.0
+          gateway: 10.11.0.52
+          name_servers:
+            - 8.8.8.8
+            - 8.8.4.4
+          use_interfaces:
+          - bond0
         br-mesh:
           enabled: true
           type: bridge
           address: ${_param:tenant_address}
           netmask: ${_param:tenant_network_netmask}
           use_interfaces:
-          - eth1.${_param:tenant_vlan}
+          - bond0.${_param:tenant_vlan}
       bridge: openvswitch
