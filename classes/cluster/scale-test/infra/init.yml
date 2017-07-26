@@ -22,9 +22,9 @@ parameters:
     cluster_name: scale-test
     cluster_public_host: ${_param:openstack_proxy_address}
     infra_kvm_address: 172.16.44.160
-    infra_kvm_node01_address: 172.16.44.146
-    infra_kvm_node02_address: 172.16.44.147
-    infra_kvm_node03_address: 172.16.44.148
+    infra_kvm_node01_address: 172.16.46.27
+    infra_kvm_node02_address: 172.16.46.28
+    infra_kvm_node03_address: 172.16.46.29
     infra_kvm_node01_deploy_address: 10.11.0.101
     infra_kvm_node02_deploy_address: 10.11.0.102
     infra_kvm_node03_deploy_address: 10.11.0.103

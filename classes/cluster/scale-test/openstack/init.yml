@@ -85,9 +85,9 @@ parameters:
     openstack_message_queue_node03_address: 172.16.44.178
 
     openstack_gateway_address: 172.16.44.179
-    openstack_gateway_node01_address: 172.16.44.152
-    openstack_gateway_node02_address: 172.16.44.153
-    openstack_gateway_node03_address: 172.16.44.154
+    openstack_gateway_node01_address: 172.16.46.30
+    openstack_gateway_node02_address: 172.16.46.31
+    openstack_gateway_node03_address: 172.16.46.32
     openstack_gateway_tenant_address: 10.0.2.6
     tenant_address: 10.0.2.6
     openstack_gateway_node01_tenant_address: 10.0.2.7
