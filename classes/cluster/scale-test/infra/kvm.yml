@@ -80,6 +80,7 @@ parameters:
           bridge: br_ctl
   linux:
     network:
+      interface:
         eth2:
           enabled: true
           type: slave
