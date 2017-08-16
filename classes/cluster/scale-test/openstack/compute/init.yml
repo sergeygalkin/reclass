@@ -37,27 +37,13 @@ parameters:
           enabled: true
           proto: manual
           type: bond
+          address: ${_param:single_address}
+          netmask: ${_param:control_network_netmask}
           use_interfaces:
           - ${_param:primary_second_nic}
           - ${_param:primary_first_nic}
           slaves: ${_param:primary_first_nic} ${_param:primary_second_nic}
           mode: 802.3ad
-        bond0.1:
-          name: bond0.${_param:control_vlan}
-          enabled: true
-          type: vlan
-          proto: static
-          address: ${_param:single_address}
-          netmask: ${_param:control_network_netmask}
-          use_interfaces:
-          - bond0
-        bond0.2:
-          name: bond0.${_param:tenant_vlan}
-          enabled: true
-          type: vlan
-          proto: manual
-          use_interfaces:
-          - bond0
         br-deploy:
           enabled: true
           type: bridge

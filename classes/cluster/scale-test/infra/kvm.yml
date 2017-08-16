@@ -119,13 +119,6 @@ parameters:
           - ${_param:primary_second_nic}
           slaves: ${_param:primary_first_nic} ${_param:primary_second_nic}
           mode: 802.3ad
-        bond0.1:
-          name: bond0.${_param:control_vlan}
-          enabled: true
-          proto: manual
-          type: vlan
-          use_interfaces:
-          - bond0
         br_ctl:
           enabled: true
           type: bridge
@@ -133,7 +126,7 @@ parameters:
           address: ${_param:single_address}
           netmask: ${_param:control_network_netmask}
           use_interfaces:
-          - bond0.${_param:control_vlan}
+          - bond0
 
   #   system:
   #     package:
