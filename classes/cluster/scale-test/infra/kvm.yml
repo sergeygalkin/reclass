@@ -109,7 +109,7 @@ parameters:
           - ${_param:dns_server01}
           - ${_param:dns_server02}
           use_interfaces:
-          - ${_param:deploy_nic}
+          - bond0
         bond0:
           enabled: true
           proto: manual
@@ -126,7 +126,7 @@ parameters:
           address: ${_param:single_address}
           netmask: ${_param:control_network_netmask}
           use_interfaces:
-          - bond0
+          - ${_param:deploy_nic}
 
   #   system:
   #     package:
