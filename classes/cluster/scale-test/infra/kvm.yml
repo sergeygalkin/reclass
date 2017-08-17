@@ -98,7 +98,7 @@ parameters:
           proto: manual
           name: ${_param:primary_second_nic}
           master: bond0
-        br_mgm:
+        br_ctl:
           enabled: true
           proto: static
           type: bridge
@@ -119,7 +119,7 @@ parameters:
           - ${_param:primary_second_nic}
           slaves: ${_param:primary_first_nic} ${_param:primary_second_nic}
           mode: 802.3ad
-        br_ctl:
+        br_mgm:
           enabled: true
           type: bridge
           proto: static
