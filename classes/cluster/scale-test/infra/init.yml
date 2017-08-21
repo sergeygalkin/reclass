@@ -59,6 +59,13 @@ parameters:
       name_servers:
         - ${_param:dns_server01}
         - ${_param:dns_server02}
+    infra_maas_node01_deploy_address: 172.16.46.33
+    infra_maas_node01_hostname: mas01
+    maas_admin_username: mirantis
+    maas_admin_password: simplepassword
+    maas_db_password: REPLACE_BY_GENERATED_VALUE_DURING_INSTALL
+
+
 
   salt:
     minion:
