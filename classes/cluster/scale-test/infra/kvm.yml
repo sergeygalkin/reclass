@@ -98,7 +98,7 @@ parameters:
           proto: manual
           name: ${_param:primary_second_nic}
           master: bond0
-        br_mgm:
+        br_ctl:
           enabled: true
           proto: static
           type: bridge
@@ -109,7 +109,7 @@ parameters:
           - ${_param:dns_server01}
           - ${_param:dns_server02}
           use_interfaces:
-          - ${_param:deploy_nic}
+          - bond0
         bond0:
           enabled: true
           proto: manual
@@ -119,21 +119,14 @@ parameters:
           - ${_param:primary_second_nic}
           slaves: ${_param:primary_first_nic} ${_param:primary_second_nic}
           mode: 802.3ad
-        bond0.1:
-          name: bond0.${_param:control_vlan}
-          enabled: true
-          proto: manual
-          type: vlan
-          use_interfaces:
-          - bond0
-        br_ctl:
+        br_mgm:
           enabled: true
           type: bridge
           proto: static
           address: ${_param:single_address}
           netmask: ${_param:control_network_netmask}
           use_interfaces:
-          - bond0.${_param:control_vlan}
+          - ${_param:deploy_nic}
 
   #   system:
   #     package:

@@ -22,12 +22,12 @@ parameters:
     cluster_name: scale-test
     cluster_public_host: ${_param:openstack_proxy_address}
     infra_kvm_address: 172.16.44.160
-    infra_kvm_node01_address: 172.16.46.27
-    infra_kvm_node02_address: 172.16.46.28
-    infra_kvm_node03_address: 172.16.46.29
-    infra_kvm_node01_deploy_address: 10.11.0.101
-    infra_kvm_node02_deploy_address: 10.11.0.102
-    infra_kvm_node03_deploy_address: 10.11.0.103
+    infra_kvm_node01_address: 10.11.0.101
+    infra_kvm_node02_address: 10.11.0.102
+    infra_kvm_node03_address: 10.11.0.103
+    infra_kvm_node01_deploy_address: 172.16.46.27
+    infra_kvm_node02_deploy_address: 172.16.46.28
+    infra_kvm_node03_deploy_address: 172.16.46.29
     infra_kvm_node01_hostname: kvm01
     infra_kvm_node02_hostname: kvm02
     infra_kvm_node03_hostname: kvm03
@@ -36,15 +36,15 @@ parameters:
     glusterfs_node02_address: ${_param:infra_kvm_node02_address}
     glusterfs_node03_address: ${_param:infra_kvm_node03_address}
 
-    control_network_netmask: 255.255.252.0
+    control_network_netmask: 255.255.255.0
     tenant_network_netmask: 255.255.255.0
     control_vlan: 2
     tenant_vlan: 1101
 
     dns_server01: 8.8.8.8
     dns_server02: 8.8.4.4
-    deploy_network_netmask: 255.255.255.0
-    deploy_network_gateway: 10.11.0.254
+    deploy_network_netmask: 255.255.252.0
+    deploy_network_gateway: 172.16.44.1
 
     linux_dhcp_interface:
       enabled: true
