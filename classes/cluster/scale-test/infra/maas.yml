@@ -23,10 +23,10 @@ parameters:
         deploy_network:
           cidr: 172.16.44.0/22
           fabric: deploy_network
-          gateway_ip: 172.17.44.1
+          gateway_ip: 172.16.44.1
           iprange:
-            end: 172.17.46.34
-            start: 172.17.46.50
+            end: 172.16.46.34
+            start: 172.16.46.50
       fabrics:
         deploy_network:
           description: Fabric for deploy_network
