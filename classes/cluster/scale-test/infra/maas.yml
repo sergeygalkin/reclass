@@ -7,7 +7,7 @@ parameters:
       interface:
         primary_interface:
           enabled: true
-          name: ens2
+          name: ens3
           type: eth
           proto: static
           netmask: ${_param:deploy_network_netmask}
