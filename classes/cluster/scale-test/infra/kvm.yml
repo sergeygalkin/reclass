@@ -1,4 +1,5 @@
 classes:
+- system.salt.control.cluster.infra_maas_single
 - system.linux.system.repo.mcp.openstack
 - system.linux.system.repo.ubuntu
 - system.linux.system.repo.glusterfs
@@ -9,11 +10,11 @@ classes:
 - system.glusterfs.server.volume.glance
 - system.glusterfs.server.volume.keystone
 - system.glusterfs.server.volume.salt_pki
-- system.salt.control.cluster.openstack_control_cluster
-- system.salt.control.cluster.openstack_proxy_cluster
-- system.salt.control.cluster.openstack_database_cluster
-- system.salt.control.cluster.openstack_message_queue_cluster
-- system.salt.control.cluster.cicd_control_cluster
+#- system.salt.control.cluster.openstack_control_cluster
+#- system.salt.control.cluster.openstack_proxy_cluster
+#- system.salt.control.cluster.openstack_database_cluster
+#- system.salt.control.cluster.openstack_message_queue_cluster
+#- system.salt.control.cluster.cicd_control_cluster
 - cluster.scale-test.cicd.gluster
 - cluster.scale-test.infra
 parameters:
@@ -24,9 +25,10 @@ parameters:
     cluster_node03_address: ${_param:infra_kvm_node03_address}
     keepalived_vip_interface: br_ctl
     keepalived_vip_virtual_router_id: 69
-    deploy_nic: eth1
+    deploy_nic: eth0
     primary_first_nic: eth2
     primary_second_nic: eth3
+    primary_third_nic: eth1
   salt:
     control:
       size: #RAM 4096,8192,16384,32768,65536
@@ -86,6 +88,11 @@ parameters:
           type: eth
           proto: manual
           name: ${_param:deploy_nic}
+        eth1:
+          enabled: true
+          type: eth
+          proto: manual
+          name: ${_param:primary_third_nic}
         eth2:
           enabled: true
           type: slave
