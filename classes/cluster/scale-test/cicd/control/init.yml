@@ -44,7 +44,7 @@ parameters:
     cluster_node02_address: ${_param:cicd_control_node02_address}
     cluster_node03_name: ${_param:cicd_control_node03_hostname}
     cluster_node03_address: ${_param:cicd_control_node03_address}
-    keepalived_vip_virtual_router_id: 180
+    keepalived_vip_virtual_router_id: 181
     keepalived_vip_password: kMvIzO0Xiak3sJc6
     keepalived_vip_interface: ens3
     cluster_vip_address: ${_param:control_vip_address}

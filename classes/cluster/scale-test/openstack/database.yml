@@ -14,7 +14,7 @@ classes:
 parameters:
   _param:
     keepalived_vip_interface: eth1
-    keepalived_vip_virtual_router_id: 80
+    keepalived_vip_virtual_router_id: 180
     galera_server_cluster_name: openstack_cluster
     cluster_vip_address: ${_param:openstack_database_address}
     cluster_local_address: ${_param:single_address}
@@ -36,4 +36,4 @@ parameters:
             aodh:
               enabled: False
             ceilometer:
-              enabled: False 
+              enabled: False

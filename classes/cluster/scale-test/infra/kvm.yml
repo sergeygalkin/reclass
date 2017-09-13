@@ -24,7 +24,7 @@ parameters:
     cluster_node02_address: ${_param:infra_kvm_node02_address}
     cluster_node03_address: ${_param:infra_kvm_node03_address}
     keepalived_vip_interface: br_ctl
-    keepalived_vip_virtual_router_id: 69
+    keepalived_vip_virtual_router_id: 169
     deploy_nic: eth0
     primary_first_nic: eth2
     primary_second_nic: eth3

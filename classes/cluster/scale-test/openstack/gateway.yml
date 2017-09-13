@@ -12,7 +12,7 @@ parameters:
 
     linux_system_codename: xenial
     keepalived_vip_interface: br-ctl
-    keepalived_vip_virtual_router_id: 69
+    keepalived_vip_virtual_router_id: 169
   linux:
     network:
       bridge: openvswitch
